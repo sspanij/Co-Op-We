@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career-Openings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        h1{
+            font-size: 40;
+            font-family:'Courier New', Courier, monospace;
+            font-weight: bolder;
+            color: white;
+            background-color: black;
+            text-align: center;
+        }
+
+        #career {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        h3{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 22px;
+            color: white;
+            background-color: black;
+            text-align: center;
+        }
+        
+        p{
+            font-family: 'Courier New', Courier, monospace;
+            color: Black;
+            background-color: white;
+
+        }
+
+        #container{
+            max-width: 880px;;
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+
+<body >
+    <div id="container">
+        <h1 class="mt-2 mb-2">Career Openings</h1>
+
+        <img class="mb-2" id="career" src="/static/career.png" height="320">
+        
+        <h3>About Career-Opening</h3>
+        <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, laudantium consequuntur quam natus architecto, ducimus nulla cupiditate illo sunt iste ex obcaecati ipsa suscipit beatae quas, ullam esse doloremque. Libero.</p>
+        
+        <h3>Open Positions</h3>
+        <div>
+            {% for job in jobs %}
+             {% include 'jobitem.html' %}
+            {% endfor %}
+        </div>
+        
+        <div style=" text-align: center;">
+            <button class="btn btn-info mb-1"> Contact Us &#x1F4E7</button>
+            <p><small>&copy; Copyright CareerOpenings</small></p>
+        </div>    
+    </div>
+</body>
+</html>
