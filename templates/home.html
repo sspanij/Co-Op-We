@@ -45,14 +45,23 @@
 </head>
 
 <body >
+    {% include 'nav.html'%}
     <div id="container">
         <h1 class="mt-2 mb-2">Career Openings</h1>
 
         <img class="mb-2" id="career" src="/static/career.png" height="320">
         
         <h3>About Career-Opening</h3>
-        <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, laudantium consequuntur quam natus architecto, ducimus nulla cupiditate illo sunt iste ex obcaecati ipsa suscipit beatae quas, ullam esse doloremque. Libero.</p>
-        
+
+        <div class="row">
+            <div class="col-6">
+                <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, laudantium consequuntur quam natus architecto, ducimus nulla cupiditate illo sunt iste ex obcaecati ipsa suscipit beatae quas, ullam esse doloremque. Libero.</p>
+            </div>
+            <div class=" d-none d-md-block col-md-6">
+                <img class='mb-2' src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="people working" style="height:220px; width:420px;">
+            </div>
+        </div>
+
         <h3>Open Positions</h3>
         <div>
             {% for job in jobs %}
@@ -61,8 +70,8 @@
         </div>
         
         <div style=" text-align: center;">
-            <button class="btn btn-info mb-1"> Contact Us &#x1F4E7</button>
-            <p><small>&copy; Copyright CareerOpenings</small></p>
+            <a href="mailto:sarath.pani2000@gmail.com?subject=Seeking%20help%20from%20Customer%20Desk%20Support%20regarding%20Job%20Openings&body=My%20Name%3A%20%3CYour%20Name%3E%0D%0A%0D%0AMy%20Question%3A%20%3CEnter%20Your%20question%20over%20here%3E" class="btn btn-info mb-1"> Contact Us &#x1F4E7</a>
+            {% include 'footer.html' %}
         </div>    
     </div>
 </body>
